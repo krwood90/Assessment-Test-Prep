@@ -13,9 +13,11 @@ nil     ? "true" : "false"  n
 ```
 ## I want to write some code that takes an array of numbers, multiplies each item in the array by 3, and returns a new array with the new values. know I should use #map, #each, or #select, but I’m not sure which one is best -- teach me.
 
+```ruby
 array.each do |num|
-  num * 3
+  p num * 3
 end
+```
 
 ## What are the common controller actions?
 
