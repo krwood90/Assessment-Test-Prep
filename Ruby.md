@@ -50,22 +50,24 @@ sum (1, 2)    3
 
 ## What is missing? M_____/View/Controller
 
-app
+  app
 
 ## What is the most beneficial aspect of TDD?
 
-
+  For TDD you can check the logic, make sure it would all work, and see what is acting up before writting the code for the app.
 
 ## Write a function that accepts an array of numbers and a second number. Beginning at index 0, total up the sum of the values of the array until you've met or surpassed the second argument. Return the number of elements required to fulfill the goal. If the goal can't be reached, return 0.
 
-def func(array, num)
-  sum = 0
-    if sum < num
-      array.inject(0) {|sum,x| sum + x }
-    else 
-      p sum
-    end
-end
+```ruby
+  def func(array, num)
+    sum = 0
+      if sum < num
+        array.inject(0) {|sum,x| sum + x }
+      else 
+        p sum
+      end
+  end
+  ```
       
   
     
