@@ -63,13 +63,16 @@ sum (1, 2)    3
 ## Write a function that accepts an array of numbers and a second number. Beginning at index 0, total up the sum of the values of the array until you've met or surpassed the second argument. Return the number of elements required to fulfill the goal. If the goal can't be reached, return 0.
 
 ```ruby
-  def func(array, num)
+  def foo(arr, num)
     sum = 0
+    arr.each_with_index do |number, index|
       if sum < num
-        array.inject(0) {|sum,x| sum + x }
+         sum + number
       else 
-        p sum
+        index
       end
+    return index
+    end
   end
   ```
       
@@ -85,10 +88,11 @@ http://jsbin.com/qurihopumo/edit?html,js,output
   // Between 9AM and Noon: We come in peace.
   // Between Noon and Midnight: We are the borg. Resistance is futile.
   // Any other time: All your base are belong to us. You have no chance to survive make your time.
-  if (time > 9 && time < 12)
-    console.log("We come in peace.")
+  $("#myMessageToEarth").append("We come in peace.<br>")
+    $("#myMessageToEarth").append("For now...")
+    }
   else if (time >=12 && time <24)
-    console.log("We are the borg. Resistance is futile.")
+    $("#myMessageToEarth").html("We are the borg. Resistance is futile.")
   else
-    console.log("All your base are belong to us. You have no chance to survive make your time.")
+    $("#myMessageToEarth").html("All your base are belong to us. You have no chance to survive make your time.")
 })()
