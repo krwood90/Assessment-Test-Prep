@@ -15,8 +15,7 @@ nil     ? "true" : "false"  n
 
 ```ruby
 def foo(array)
-  array.each do |num|
-    p num * 3
+  array.map do {|num| num*3}
   end
 end
 ```
